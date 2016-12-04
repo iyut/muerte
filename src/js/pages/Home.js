@@ -11,7 +11,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
-        <h1>Todos</h1>
+        <h1>Login</h1>
         <Login store={LoginStore} />
       </div>
     );

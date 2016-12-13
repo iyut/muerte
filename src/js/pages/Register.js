@@ -4,6 +4,7 @@ import RegisterForm from "../components/register/Register";
 import RegisterStore from "../components/register/RegisterStore";
 
 export default class Register extends React.Component {
+
   constructor() {
     super();
   }

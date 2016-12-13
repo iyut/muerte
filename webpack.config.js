@@ -7,7 +7,15 @@ module.exports = {
   context: path.join(__dirname, "src"),
   devtool: debug ? "inline-sourcemap" : null,
   entry: "./js/main.js",
+  node: {
+      net: 'empty',
+      tls: 'empty',
+      dns: 'empty'
+  },
   module: {
+    preLoaders: [
+        { test: /\.json$/, loader: 'json'},
+    ],
     loaders: [
       {test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff'},
       {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream'},
